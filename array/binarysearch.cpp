@@ -13,7 +13,7 @@ public:
      binarysearch(/* args */){}
     ~ binarysearch(){}
 
-    /// @brief find target value in ordered array
+    /// @brief find target value in ordered array,we choose closed interval
     /// @param target 
     /// @param array 
     /// @return -1: no target in array  other: the index of target value 
