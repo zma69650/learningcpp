@@ -39,15 +39,15 @@ public:
         int middle = left + (right - left)/2;
         int pair_left = middle;
         int pair_right = middle;
-        while (left<right)
+        while (left<=right)
         {
             /* code */
             int middle = left + (right-left)/2;
             if(target > array[middle]){  //target value in right 
-                left = middle;
+                left = middle + 1;
             }
             else if(target < array[middle]){
-                right = middle;
+                right = middle - 1;
                 pair_right = right;
             }  //target value in left
             else{
@@ -78,7 +78,10 @@ int main()
 {
     vector<int> array;
     array.resize(10,4);
-
+    array[0]=1;
+    array[1]=2;
+    array[8]=5;
+    array[9]=6;
     FindFirstandEndInArray<int> fp;
     std::pair<int,int> result = fp.getResults(4,array);
     cout<<"right: "<<result.second<<endl;
