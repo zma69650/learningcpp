@@ -83,7 +83,7 @@ int main()
     array[8]=5;
     array[9]=6;
     FindFirstandEndInArray<int> fp;
-    std::pair<int,int> result = fp.getResults(4,array);
+    std::pair<int,int> result = fp.getResults(3,array);
     cout<<"right: "<<result.second<<endl;
     
     return 0;
